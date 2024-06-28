@@ -160,6 +160,7 @@ do_set() {
 	fi
 
 	update_env "${target}" || die -q "Could not update env file"
+	env-update || die -q "Could not update environment.d and ld.so.conf"
 }
 
 
